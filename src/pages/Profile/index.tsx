@@ -8,6 +8,12 @@ import RepoCard from "../../components/RepoCard";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
+interface Data {
+  user?: APIUser;
+  repos?: APIRepo[];
+  error?: string;
+}
+
 const Profile: React.FC = () => {
   return (
     <>
