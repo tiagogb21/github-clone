@@ -1,0 +1,87 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  /* JFY Coral New  */
+  --apricot: #f4a27e;
+  --apricot-peach: #f9c29d;
+  --corvette: #fcd4a4;
+  --colonial-white: #ffe6ab;
+  /* JFY Black New */
+  --charade: #0d0d0e;
+  --outer-space: #1f282c;
+  --oslo-gray: #90969a;
+  --loblolly: #bec8ce;
+  --iron: #dadfe2;
+  --white: #ffffff;
+  /* JFY Blue New */
+  --daintree: #003141;
+  --nepal: #799fb5;
+  --polo-blue: #7ba7c6;
+  --danube: #7db4da;
+  --loblolly: #acbbc2;
+  --spindle: #a3c8e2;
+  --geyser: #d0dfe3;
+  --gallery: #eaeaea;
+  /* JFY Cyprus New */
+  --cyprus: #003f40;
+  /* Tipografia */
+}
+
+*,
+button,
+input {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
