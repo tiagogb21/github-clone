@@ -27,3 +27,17 @@ export const RightSide = styled.div`
     width: 75%;
   }
 `;
+
+export const Repos = styled.div`
+  margin-top: 16px;
+
+  > h2 {
+    font-size: 16px;
+  }
+  > article {
+    margin-top: 8px;
+    display: grid;
+    grid-gap: 16px;
+    grid-template-columns: 1fr;
+  }
+`;

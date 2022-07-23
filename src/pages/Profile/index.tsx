@@ -1,8 +1,10 @@
 import React from "react";
+import { repoCards, languages } from "../../data/data";
 
-import { Container, Main, LeftSide, RightSide } from "./styles";
+import { Container, Main, LeftSide, RightSide, Repos } from "./styles";
 
 import ProfileData from "../../components/ProfileData";
+import RepoCard from "../../components/RepoCard";
 
 const Profile: React.FC = () => {
   return (
@@ -11,7 +13,7 @@ const Profile: React.FC = () => {
         <LeftSide>
           <ProfileData
             // Username
-            userName={"username"}
+            username={"username"}
             // Full Name
             name={"name"}
             // Avatar
@@ -30,7 +32,24 @@ const Profile: React.FC = () => {
             blog={"null"}
           />
         </LeftSide>
-        <RightSide></RightSide>
+        <RightSide>
+          <Repos>
+            <h2>Random repos</h2>
+            <article>
+              {repoCards.map((n) => (
+                <RepoCard
+                  key={n}
+                  username={""}
+                  reponame={""}
+                  description={""}
+                  language={languages[n % 5]}
+                  stars={Math.round(Math.random() * 10)}
+                  forks={Math.round(Math.random() * 100)}
+                />
+              ))}
+            </article>
+          </Repos>
+        </RightSide>
       </Main>
     </Container>
   );
