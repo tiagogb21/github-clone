@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FaUserCircle } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
 import { Container, GithubLogo, SearchForm } from "./styles";
@@ -15,6 +16,7 @@ function Header() {
 
   return (
     <Container>
+      <GithubLogo />
       <SearchForm onSubmit={handleSubmit}>
         <input
           placeholder="Enter Username or Repo ..."
@@ -25,6 +27,7 @@ function Header() {
           }
         />
       </SearchForm>
+      <FaUserCircle />
     </Container>
   );
 }

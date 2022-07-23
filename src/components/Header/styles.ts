@@ -24,15 +24,16 @@ export const GithubLogo = styled(BsGithub)`
 
 export const SearchForm = styled.form`
   padding-left: 16px;
-  width: 100%;
+  width: 30%;
 
   input {
-    background: var(--white);
     /* Para tirar a marca do input */
     outline: 0;
     border-radius: 6px;
     padding: 7px 12px;
     width: 100%;
+    border: 1px solid var(--iron);
+    background: inherit;
   }
 
   /* Para causar o efeito de diminuição da barra */

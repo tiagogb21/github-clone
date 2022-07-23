@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import { BsGithub } from "react-icons/bs";
-import { loginFooter } from "../../data/data";
+import { loginFooter } from "../../utils/data";
 
 import "./styles.css";
 
@@ -15,7 +15,7 @@ function Login() {
       {/* Sign in */}
       <h1 className="login-title">Sign in to GitHub</h1>
       {/* Forms */}
-      <form action="">
+      <form className="form__container" action="">
         <label htmlFor="email-input">
           Username
           <input

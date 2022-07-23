@@ -27,7 +27,7 @@
   font-weight: 300;
 }
 
-form {
+.form__container {
   width: 308px;
   height: 200px;
   border: 1px solid var(--loblolly);
@@ -41,7 +41,7 @@ form {
   padding: 10px 0;
 }
 
-form label {
+.form__container label {
   display: flex;
   flex-direction: column;
   width: 90%;
@@ -52,7 +52,7 @@ form label {
   justify-content: space-between;
 }
 
-form label input {
+.form__container label input {
   margin: 10px 0;
   border: 1px solid var(--loblolly);
   border-radius: 3px;
