@@ -17,9 +17,9 @@ const Profile: React.FC = () => {
             // Avatar
             avatarUrl={"avatar"}
             // Followers
-            followers={"number"}
+            followers={0}
             // Following
-            following={"number"}
+            following={0}
             // Company
             company={"company"}
             // Location
