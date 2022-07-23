@@ -7,6 +7,13 @@ export const Container = styled.main`
 export const Main = styled.div`
   display: flex;
   flex-direction: column;
+
+  margin: 0 auto;
+  max-width: 1280px;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
 `;
 
 export const LeftSide = styled.div`
