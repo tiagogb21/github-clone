@@ -1,9 +1,18 @@
 # Github Clone
 
+## Tecnologias utilizadas:
+
+<ul>
+  <li>react</li>
+  <li>context</li>
+  <li>hooks</li>
+</ul>
+
 ## Como utilizar:
 
 <ul>
   <li>npm install</li>
+  <li>npm start</li>
 </ul>
 
 ## Usuário:
