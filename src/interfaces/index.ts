@@ -12,6 +12,7 @@ export interface APIUser {
 }
 
 export interface APIRepo {
+  id: number;
   name: string;
   owner: {
     login: string;

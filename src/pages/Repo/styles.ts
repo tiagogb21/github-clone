@@ -4,12 +4,19 @@ import { AiOutlineFork } from "react-icons/ai";
 import { FaGithub } from "react-icons/fa";
 
 export const Container = styled.div`
+  height: 70vh;
   display: flex;
   flex-direction: column;
   padding: 16px;
   > p {
     font-size: 16px;
   }
+`;
+
+export const HeaderRepo = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 `;
 
 export const Breadcrumb = styled.div`
@@ -54,6 +61,9 @@ export const Stats = styled.ul`
   display: flex;
   align-items: center;
   > li {
+    border: 1px solid var(--loblolly);
+    padding: 5px;
+    border-radius: 6px;
     display: flex;
     align-items: center;
     margin-right: 9px;

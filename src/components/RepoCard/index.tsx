@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import {
@@ -29,12 +29,13 @@ const RepoCard: React.FC<Props> = ({
 }) => {
   const languageClass = language ? language.toLowerCase() : "other";
 
+  useEffect(() => {}, []);
   return (
     <Container>
       <TopSide>
         <header>
           <RepoIcon />
-          <Link to={`/{username}/{reponame}`}>{reponame}</Link>
+          <Link to={`/${username}/${reponame}`}>{reponame}</Link>
         </header>
 
         <p>{description}</p>

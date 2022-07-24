@@ -16,7 +16,7 @@ export const GithubLogo = styled(BsGithub)`
   /* Para evitar que a logo perca sua dimensão: */
   flex-shrink: 0;
 
-  cursor: point;
+  cursor: pointer;
   &:hover {
     opacity: 0.8;
   }
@@ -31,14 +31,15 @@ export const SearchForm = styled.form`
     outline: 0;
     border-radius: 6px;
     padding: 7px 12px;
-    width: 100%;
+    width: 70%;
     border: 1px solid var(--iron);
     background: inherit;
   }
 
   /* Para causar o efeito de diminuição da barra */
-  &:focus {
-    width: 30%;
+  input:focus {
+    width: 100%;
+    background: white;
   }
 
   transition: width 0.2s ease-out, color 0.2s ease-out;

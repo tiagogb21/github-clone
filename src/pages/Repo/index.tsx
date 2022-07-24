@@ -10,9 +10,12 @@ import {
   ForkIcon,
   LinkButton,
   GithubIcon,
+  HeaderRepo,
 } from "./styles";
 
 import { APIRepo } from "../../interfaces/index";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 
 interface Data {
   repo?: APIRepo;
@@ -44,41 +47,48 @@ const Repo: React.FC = () => {
   }
 
   return (
-    <Container>
-      <Breadcrumb>
-        <RepoIcon />
+    <>
+      <Header />
+      <Container>
+        <HeaderRepo>
+          <Breadcrumb>
+            <RepoIcon />
 
-        <Link className={"username"} to={`/${username}`}>
-          {username}
-        </Link>
+            <Link className={"username"} to={`/${username}`}>
+              {username}
+            </Link>
 
-        <span>/</span>
+            <span>/</span>
 
-        <Link className={"reponame"} to={`/${username}/${reponame}`}>
-          {reponame}
-        </Link>
-      </Breadcrumb>
+            <Link className={"reponame"} to={`/${username}/${reponame}`}>
+              {reponame}
+            </Link>
+          </Breadcrumb>
 
-      <p>{data.repo.description}</p>
+          <p>{data.repo.description}</p>
 
-      <Stats>
-        <li>
-          <StarIcon />
-          <b>{data.repo.stargazers_count}</b>
-          <span>stars</span>
-        </li>
-        <li>
-          <ForkIcon />
-          <b>{data.repo.forks}</b>
-          <span>forks</span>
-        </li>
-      </Stats>
+          <Stats>
+            <li>
+              <ForkIcon />
+              <span>fork</span>
+              <b>{data.repo.forks}</b>
+            </li>
 
-      <LinkButton href={data.repo.html_url}>
-        <GithubIcon />
-        <span>View on GitHub</span>
-      </LinkButton>
-    </Container>
+            <li>
+              <StarIcon />
+              <span>stars</span>
+              <b>{data.repo.stargazers_count}</b>
+            </li>
+          </Stats>
+        </HeaderRepo>
+
+        <LinkButton href={data.repo.html_url}>
+          <GithubIcon />
+          <span>View on GitHub</span>
+        </LinkButton>
+      </Container>
+      <Footer />
+    </>
   );
 };
 

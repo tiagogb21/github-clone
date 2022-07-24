@@ -16,7 +16,7 @@ function Login() {
 
   const navigate = useNavigate();
 
-  const { userData, getDataFromUser } = useContext(MyContext);
+  const { userData, getDataFromUser, reposData } = useContext(MyContext);
 
   useEffect(() => {
     getDataFromUser(user);
@@ -26,6 +26,7 @@ function Login() {
     if (!userData) return;
     localStorage.setItem("user", user);
     localStorage.setItem("userdata", JSON.stringify(userData));
+    localStorage.setItem("reposdata", JSON.stringify(reposData));
     navigate(`/${user}`);
   };
 
