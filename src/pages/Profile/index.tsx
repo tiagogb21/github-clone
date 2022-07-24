@@ -1,7 +1,14 @@
 import React, { useContext, useEffect, useState } from "react";
 import { repoCards, languages } from "../../utils/data";
 
-import { Container, Main, LeftSide, RightSide, Repos } from "./styles";
+import {
+  Container,
+  Main,
+  LeftSide,
+  RightSide,
+  Repos,
+  CalendarHeading,
+} from "./styles";
 
 import ProfileData from "../../components/ProfileData";
 import RepoCard from "../../components/RepoCard";
@@ -9,6 +16,7 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import MyContext from "../../MyContext";
 import { useNavigate } from "react-router-dom";
+import RandomCalendar from "../../components/RandomCalendar";
 
 // interface Data {
 //   user?: APIUser;
@@ -77,6 +85,10 @@ const Profile: React.FC = () => {
                 ))}
               </article>
             </Repos>
+            <CalendarHeading>
+              Random calendar (do not represent actual data)
+            </CalendarHeading>
+            <RandomCalendar />
           </RightSide>
         </Main>
       </Container>
