@@ -1,13 +1,34 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+
+import MyContext from "../../MyContext";
 
 import { BsGithub } from "react-icons/bs";
 import { loginFooter } from "../../utils/data";
 
 import "./styles.css";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
-  const [email, setEmail] = useState("");
+  const [user, setUser] = useState("");
   const [password, setPassword] = useState("");
+
+  window.localStorage.clear();
+
+  const navigate = useNavigate();
+
+  const { userData, getDataFromUser } = useContext(MyContext);
+
+  useEffect(() => {
+    getDataFromUser(user);
+  }, [user]);
+
+  const handleClick = () => {
+    if (!userData) return;
+    localStorage.setItem("user", user);
+    localStorage.setItem("userdata", JSON.stringify(userData));
+    navigate(`/${user}`);
+  };
+
   return (
     <main className="login__container">
       {/* Logo */}
@@ -19,10 +40,10 @@ function Login() {
         <label htmlFor="email-input">
           Username
           <input
-            id="email-input"
-            type="email"
-            value={email}
-            onChange={({ target }) => setEmail(target.value)}
+            id="user-input"
+            type="text"
+            value={user}
+            onChange={({ target }) => setUser(target.value)}
           />
         </label>
         <label htmlFor="password-input">
@@ -37,7 +58,11 @@ function Login() {
             onChange={({ target }) => setPassword(target.value)}
           />
         </label>
-        <button type="button" className="btn-singin">
+        <button
+          type="button"
+          className="btn-singin"
+          onClick={() => handleClick()}
+        >
           Sign in
         </button>
       </form>

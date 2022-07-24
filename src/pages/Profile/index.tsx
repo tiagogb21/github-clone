@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { repoCards, languages } from "../../utils/data";
 
 import { Container, Main, LeftSide, RightSide, Repos } from "./styles";
@@ -7,14 +7,32 @@ import ProfileData from "../../components/ProfileData";
 import RepoCard from "../../components/RepoCard";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import MyContext from "../../MyContext";
+import { useNavigate } from "react-router-dom";
 
-interface Data {
-  user?: APIUser;
-  repos?: APIRepo[];
-  error?: string;
-}
+// interface Data {
+//   user?: APIUser;
+//   repos?: APIRepo[];
+//   error?: string;
+// }
 
 const Profile: React.FC = () => {
+  const { userData, setUserData } = useContext(MyContext);
+
+  const navigate = useNavigate();
+
+  if (!userData) navigate("/");
+
+  useEffect(() => {
+    const verifyUserData = () => {
+      if (!userData) {
+        const teste = localStorage.getItem("userdata");
+        return teste && setUserData(JSON.parse(teste));
+      }
+    };
+    verifyUserData();
+  }, []);
+
   return (
     <>
       <Header />
@@ -23,23 +41,23 @@ const Profile: React.FC = () => {
           <LeftSide>
             <ProfileData
               // Username
-              username={"username"}
+              username={userData.login}
               // Full Name
-              name={"name"}
+              name={userData.name}
               // Avatar
-              avatarUrl={"avatar"}
+              avatarUrl={userData.avatar_url}
               // Followers
-              followers={0}
+              followers={userData.followers}
               // Following
-              following={0}
+              following={userData.following}
               // Company
-              company={"company"}
+              company={userData.company}
               // Location
-              location={"location"}
+              location={userData.location}
               // email
-              email={"email"}
+              email={userData.email}
               // Blog
-              blog={"null"}
+              blog={userData.blog}
             />
           </LeftSide>
           <RightSide>

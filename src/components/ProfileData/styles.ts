@@ -53,7 +53,7 @@ export const Avatar = styled.img`
 
 export const Row = styled.ul`
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   flex-wrap: wrap;
   margin: 20px 0;
 

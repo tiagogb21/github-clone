@@ -31,3 +31,5 @@ export const languages = [
   "c",
   "ruby",
 ];
+
+export const USERS = "https://api.github.com/users/";
