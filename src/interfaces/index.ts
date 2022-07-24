@@ -23,3 +23,17 @@ export interface APIRepo {
   language?: string;
   description?: string;
 }
+
+export interface APIBranch {
+  name: string;
+  commit: {
+    url: string;
+  };
+}
+
+export interface APICommit {
+  filename: string;
+  id?: number;
+  additions: number;
+  changes: number;
+}

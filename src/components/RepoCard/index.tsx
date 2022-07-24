@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import {
@@ -29,35 +29,38 @@ const RepoCard: React.FC<Props> = ({
 }) => {
   const languageClass = language ? language.toLowerCase() : "other";
 
-  useEffect(() => {}, []);
   return (
-    <Container>
-      <TopSide>
-        <header>
-          <RepoIcon />
-          <Link to={`/${username}/${reponame}`}>{reponame}</Link>
-        </header>
+    <>
+      <Container>
+        <TopSide>
+          <header>
+            <article>
+              <RepoIcon />
+              <Link to={`/${username}/${reponame}`}>{reponame}</Link>
+            </article>
+            <article>
+              <span>
+                <StarIcon />
+                <span>{stars}</span>
+              </span>
+              <span>
+                <ForkIcon />
+                <span>{forks}</span>
+              </span>
+            </article>
+          </header>
+        </TopSide>
 
-        <p>{description}</p>
-      </TopSide>
-
-      <BotSide>
-        <ul>
-          <li>
-            <div className={`language ${languageClass}`}></div>
-            <span>{language}</span>
-          </li>
-          <li>
-            <StarIcon />
-            <span>{stars}</span>
-          </li>
-          <li>
-            <ForkIcon />
-            <span>{forks}</span>
-          </li>
-        </ul>
-      </BotSide>
-    </Container>
+        <BotSide>
+          <ul>
+            <li>
+              <div className={`language ${languageClass}`}></div>
+              <span>{language}</span>
+            </li>
+          </ul>
+        </BotSide>
+      </Container>
+    </>
   );
 };
 

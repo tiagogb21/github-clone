@@ -5,6 +5,7 @@ import { RiBookMarkLine, RiStarLine } from "react-icons/ri";
 
 export const Container = styled.div`
   display: flex;
+  height: 5vw;
   flex-direction: column;
   justify-content: space-between;
   padding: 16px;
@@ -13,11 +14,15 @@ export const Container = styled.div`
 `;
 
 export const TopSide = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   > header {
     display: flex;
-    align-items: center;
+    justify-content: space-between;
 
-    > a {
+    a {
       margin-left: 8px;
       font-size: 14px;
       font-weight: 600;
@@ -30,13 +35,11 @@ export const TopSide = styled.div`
       text-decoration: underline;
     }
   }
-
-  > p {
-    margin: 8px 0 16px;
-  }
 `;
 
-export const BotSide = styled.div``;
+export const BotSide = styled.div`
+  display: flex;
+`;
 
 const iconCss = css`
   width: 16px;

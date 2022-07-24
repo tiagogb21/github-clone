@@ -1,5 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
-import { languages } from "../../utils/data";
+import React, { useContext, useEffect } from "react";
 
 import {
   Container,
@@ -19,6 +18,8 @@ import { useNavigate } from "react-router-dom";
 import RandomCalendar from "../../components/RandomCalendar";
 import { APIRepo } from "../../interfaces";
 
+import { authenticate } from "../../utils/authentication";
+
 const Profile: React.FC = () => {
   const { userData, setUserData, reposData, setReposData } =
     useContext(MyContext);
@@ -37,8 +38,6 @@ const Profile: React.FC = () => {
     };
     verifyUserData();
   }, []);
-
-  console.log(reposData);
 
   return (
     <>

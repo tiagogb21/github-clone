@@ -9,6 +9,7 @@ function Router() {
     <BrowserRouter>
       <Routes>
         <Route index element={<Login />} />
+        <Route path="/profile" element={<Profile />} />
         <Route path="/:username" element={<Profile />} />
         <Route path="/:username/:reponame" element={<Repo />} />
       </Routes>
