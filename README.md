@@ -11,8 +11,8 @@
 ## Como utilizar:
 
 <ul>
-  <li>Para instalar as dependências: npm install</li>
-  <li>Para rodar o programa: npm start</li>
+  <li>Para instalar as dependências: <b>npm install</b></li>
+  <li>Para rodar o programa: <b>npm start</b></li>
 </ul>
 
 ## Usuário:
