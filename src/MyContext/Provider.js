@@ -11,6 +11,7 @@ function MyProvider({ children }) {
 
   const getDataFromUser = async (user) => {
     const getData = await fetchUserApi(findUser || user);
+    console.log(getData);
     setUserData(getData);
     const getReposData = await fetchReposApi(findUser || user);
     setReposData(getReposData);
@@ -28,6 +29,7 @@ function MyProvider({ children }) {
   const store = {
     userData,
     setUserData,
+    setFindUser,
     getDataFromUser,
     reposData,
     setReposData,

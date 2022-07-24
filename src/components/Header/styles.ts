@@ -23,6 +23,7 @@ export const GithubLogo = styled(BsGithub)`
 `;
 
 export const SearchForm = styled.form`
+  display: flex;
   padding-left: 16px;
   width: 30%;
 
@@ -34,12 +35,24 @@ export const SearchForm = styled.form`
     width: 70%;
     border: 1px solid var(--iron);
     background: inherit;
+    margin-right: 10px;
   }
 
   /* Para causar o efeito de diminuição da barra */
   input:focus {
     width: 100%;
     background: white;
+  }
+
+  button {
+    border-radius: 6px;
+    padding: 5px;
+  }
+
+  button:hover {
+    cursor: pointer;
+    background: var(--daintree);
+    color: var(--iron);
   }
 
   transition: width 0.2s ease-out, color 0.2s ease-out;
