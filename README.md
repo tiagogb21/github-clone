@@ -25,4 +25,6 @@
   <li>O app irá procurar na api do github as informações do usuário e depois de fazer a requisição irá simular a página pessoal do github.</li>
 
   <li>Configuramos o site de forma que o usuário não consiga acessar uma página sem ter passado as informações necessárias, evitando assim possíveis erros relacionados a renderização de componentes.</li>
+
+  <li>Após clicar em um projeto o usuário será redirecionado a página que contém informações sobre o projeto e também as branches, ao clicar em uma branch o usuário irá ver a lista de commits da respectiva branch</li>
 </ul>
